@@ -9,7 +9,6 @@ popupButtonClose.addEventListener('click', closePopup);
 
 function openPopup () {
   popup.classList.add('popup_opened');
-  nameInput.textContent = profileName.value;
 }
 
 function closePopup(){
