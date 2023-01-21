@@ -1,0 +1,9 @@
+.element__picture {
+  width: 282px;
+  min-height: 282px;
+  margin: 0;
+  background-image: url("../../../images/karachaevsk.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 0 0;
+}

@@ -1,0 +1,12 @@
+.button-add__vector {
+  max-width: 22px;
+  min-height: 22px;
+  margin: 0;
+}
+
+@media screen and (max-width: 660px) {
+  .button-add__vector {
+    max-width: 16px;
+    min-height: 16px;
+  }
+}
