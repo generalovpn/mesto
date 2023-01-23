@@ -1,9 +1,7 @@
 .page {
   max-width: 1280px;
   margin: 0 auto;
-  position: relative;
   background: #000000;
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: #FFFFFF;
-  border: 1px solid #FFFFFF;
   }

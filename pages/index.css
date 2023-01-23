@@ -4,29 +4,33 @@
 
 @import url(../blocks/page/page.css);
 
+@import url(../blocks/content/content.css);
+
 @import url(../blocks/header/header.css);
-@import url(../blocks/header/logo/header-logo.css);
+@import url(../blocks/header/__logo/header__logo.css);
 
 @import url(../blocks/profile/profile.css);
-@import url(../blocks/profile/avatar/profile__avatar.css);
-@import url(../blocks/profile/info/profile__info.css);
-@import url(../blocks/profile/name/profile__name.css);
-@import url(../blocks/profile/batton-edit/profile__batton-edit.css);
-@import url(../blocks/profile/about-me/profile__about-me.css);
-@import url(../blocks/profile/button-add/profile__button-add.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__name/profile__name.css);
+@import url(../blocks/profile/__btn-edit/profile__btn-edit.css);
+@import url(../blocks/profile/__about-me/profile__about-me.css);
+@import url(../blocks/profile/__btn-add/profile__btn-add.css);
 
 @import url(../blocks/elements/elemenets.css);
 @import url(../blocks/element/element.css);
-@import url(../blocks/element/title/element__title.css);
-@import url(../blocks/element/picture/element__picture.css);
-@import url(../blocks/element/heart/element__heart.css);
+@import url(../blocks/element/__title/element__title.css);
+@import url(../blocks/element/__group/element__group.css);
+@import url(../blocks/element/__picture/element__picture.css);
+@import url(../blocks/element/__heart/element__heart.css);
+
+@import url(../blocks/field/field\ .css);
 
 @import url(../blocks/popup/popup.css);
-@import url(../blocks/popup/container/popup__container.css);
-@import url(../blocks/popup/button-close/popup__button-close.css);
-@import url(../blocks/popup/text/popup__text.css);
-@import url(../blocks/popup/name/popup__name.css);
-@import url(../blocks/popup/about-me/popup__about-me.css);
-@import url(../blocks/popup/btn-save/popup__btn-save.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__btn-close/popup__btn-close.css);
+@import url(../blocks/popup/__text/popup__text.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__btn-save/popup__btn-save.css);
 
 @import url(../blocks/footer/footer.css);

@@ -5,5 +5,7 @@
   color: #000000;
   margin: 0 auto;
   border-radius: 10px;
-  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: min-content;
 }

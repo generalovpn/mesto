@@ -1,0 +1,23 @@
+.field {
+  width: 358px;
+  height: 27px;
+  margin: 25px auto 0;
+  padding: 0 0 4px;
+  border: 0;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+input.field:focus {
+  outline: 0;
+  border: 3px solid #79bcf6;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 660px) {
+  .field {
+    width: 238px;
+    margin: 25px 0 0;
+  }
+}

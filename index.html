@@ -8,58 +8,72 @@
   </head>
   <body class="page">
     <header class="header">
-      <img src="./images/logo.svg" class="header-logo" alt="Изображение логотип"/>
+      <img src="./images/logo.svg" class="header__logo" alt="Изображение логотип"/>
     </header>
     <main class="content">
       <section class="profile">
         <img src="./images/avatar.jpg" class="profile__avatar" alt="Изображение аватарка"/>
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button class="profile__batton-edit" type="button"></button>
+          <button class="profile__btn-edit" type="button"></button>
           <p class="profile__about-me">Исследователь океана</p>
         </div>
-        <button class="profile__button-add"></button>
+        <button class="profile__btn-add"></button>
       </section>
       <section class="elements">
         <div class="element">
           <img src="./images/karachaevsk.jpg" class="element__picture" alt="Изображение крепость Карачаевск"/>
-          <h2 class="element__title">Карачаевск</h2>
-          <div class="element__heart"></div>
+          <div class="element__group">
+            <h2 class="element__title">Карачаевск</h2>
+            <button class="element__heart" type="button"></button>
+          </div>
         </div>
         <div class="element">
           <img src="./images/elbrus.jpg" class="element__picture" alt="Изображение гора Эльбрус"/>
-          <h2 class="element__title">Гора Эльбрус</h2>
-          <div class="element__heart"></div>
+          <div class="element__group">
+            <h2 class="element__title">Гора Эльбрус</h2>
+            <button class="element__heart" type="button"></button>
+          </div>
         </div>
         <div class="element">
           <img src="./images/dombay.jpg" class="element__picture" alt="Изображение гора Домбай"/>
-          <h2 class="element__title">Домбай</h2>
-          <div class="element__heart"></div>
+          <div class="element__group">
+            <h2 class="element__title">Домбай</h2>
+            <button class="element__heart" type="button"></button>
+          </div>
         </div>
         <div class="element">
           <img src="./images/elbrus.jpg" class="element__picture" alt="Изображение гора Эльбрус"/>
-          <h2 class="element__title">Гора Эльбрус</h2>
-          <div class="element__heart"></div>
+          <div class="element__group">
+            <h2 class="element__title">Гора Эльбрус</h2>
+            <button class="element__heart" type="button"></button>
+          </div>
         </div>
         <div class="element">
           <img src="./images/dombay.jpg" class="element__picture" alt="Изображение гора Домбай"/>
-          <h2 class="element__title">Домбай</h2>
-          <div class="element__heart"></div>
+          <div class="element__group">
+            <h2 class="element__title">Домбай</h2>
+            <button class="element__heart" type="button"></button>
+          </div>
         </div>
         <div class="element">
           <img src="./images/karachaevsk.jpg" class="element__picture" alt="Изображение крепость Карачаевск"/>
-          <h2 class="element__title">Карачаевo-Черкесия</h2>
-          <div class="element__heart"></div>
+          <div class="element__group">
+            <h2 class="element__title">Карачаевo-Черкесия</h2>
+            <button class="element__heart" type="button"></button>
+          </div>
         </div>
       </section>
       <section class="popup">
-        <form class="popup__container">
-          <button class="popup__button-close"></button>
+        <div class="popup__container">
+          <button class="popup__btn-close" type="button"></button>
           <h3 class="popup__text">Редактировать профиль</h3>
-          <input type="text" class="popup__name" placeholder="Жак-Ив Кусто" required/>
-          <input type="text" class="popup__about-me" placeholder="Исследователь океана" required/>
-          <button class="popup__btn-save" type="submit">Сохранить</button>
-        </form>
+          <form class="popup__form" name="form">
+            <input type="text" name="name" class="field popup__field_type_name" placeholder="Имя" required/>
+            <input type="text" name="job" class="field popup__field_type_profession" placeholder="Профессия" required/>
+            <button class="popup__btn-save" type="submit">Сохранить</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="footer">
