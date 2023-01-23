@@ -9,7 +9,6 @@ let profileName = document.querySelector('.profile__name');
 let profileAboutMe = document.querySelector('.profile__about-me');
 let elementHeart = document.querySelectorAll('.element__heart');
 
-
 profileBtnEdit.addEventListener('click', openPopup);
 popupBtnClose.addEventListener('click', closePopup);
 
