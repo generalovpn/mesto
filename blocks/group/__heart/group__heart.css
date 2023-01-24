@@ -1,4 +1,4 @@
-.element__heart {
+.group__heart {
   min-width: 22px;
   max-height: 19px;
   margin: 5px 5px 0 0;
@@ -10,11 +10,11 @@
   background-repeat: no-repeat;
 }
 
-.element__heart:hover {
+.group__heart:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
-.element__heart.active {
+.group__heart.active {
   background: url('../../../images/like_active.svg');
 }

@@ -1,4 +1,4 @@
-.popup__field {
+.form__field {
   width: 358px;
   height: 27px;
   margin: 25px auto 0;
@@ -9,14 +9,14 @@
   line-height: 17px;
   font-weight: 400;
 }
-input.popup__field:focus {
+input.form__field:focus {
   outline: 0;
   border: 3px solid #79bcf6;
   border-radius: 2px;
 }
 
 @media screen and (max-width: 660px) {
-  .popup__field {
+  .form__field {
     width: 238px;
     margin: 25px 0 0;
   }

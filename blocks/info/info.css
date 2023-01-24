@@ -1,4 +1,4 @@
-.profile__info {
+.info {
   max-width: 336px;
   max-height: 73px;
   margin: 22px auto 25px 0;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 660px) {
-  .profile__info {
+  .info {
     max-width: 282px;
     max-height: 54px;
     margin: 0 auto;

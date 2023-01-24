@@ -1,13 +1,13 @@
-let profileBtnEdit = document.querySelector('.profile__btn-edit');
+let profileBtnEdit = document.querySelector('.info__btn-edit');
 let popup = document.querySelector('.popup');
 let popupBtnClose = document.querySelector('.popup__btn-close');
-let popupBtnSave = document.querySelector('.popup__btn-save');
-let formElement = document.querySelector('.popup__form');
-let nameInput = document.querySelector('.popup__field_type_name');
-let jobInput = document.querySelector('.popup__field_type_profession');
-let profileName = document.querySelector('.profile__name');
-let profileAboutMe = document.querySelector('.profile__about-me');
-let elementHeart = document.querySelectorAll('.element__heart');
+let popupBtnSave = document.querySelector('.form__btn-save');
+let formElement = document.querySelector('.form');
+let nameInput = document.querySelector('.form__field_type_name');
+let jobInput = document.querySelector('.form__field_type_profession');
+let profileName = document.querySelector('.info__name');
+let profileAboutMe = document.querySelector('.info__about-me');
+let elementHeart = document.querySelectorAll('.group__heart');
 
 profileBtnEdit.addEventListener('click', openPopup);
 popupBtnClose.addEventListener('click', closePopup);
