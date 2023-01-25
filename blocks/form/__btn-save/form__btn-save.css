@@ -1,5 +1,5 @@
 .form__btn-save {
-  width: 358px;
+  min-width: 358px;
   min-height: 50px;
   margin: 49px auto 0;
   background: #000000;
@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 660px) {
   .form__btn-save {
-    width: 238px;
+    min-width: 238px;
     min-height: 46px;
     margin: 45px 0 0;
     font-size: 14px;
