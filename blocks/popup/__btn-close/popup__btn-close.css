@@ -6,7 +6,8 @@
   position: absolute;
   top: -40px;
   right: -40px;
-  background: url('../../../images/close-icon.jpg');
+  background-color: transparent;
+  background: url('../../../images/close-icon.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 .elements {
   max-width: 880px;
-  margin: 49px auto 0;
+  margin: 51px auto 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
   justify-content: end;
@@ -11,6 +11,7 @@
 @media screen and (max-width: 660px) {
   .elements {
     max-width: 282px;
-    margin: 36px auto 0;
+    margin: 35px auto 0;
+    row-gap: 20px;
   }
 }

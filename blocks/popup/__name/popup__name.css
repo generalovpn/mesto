@@ -1,7 +1,6 @@
 .popup__name {
   width: 330px;
-  max-height: 23px;
-  margin: 34px 64px 0 36px;
+  margin: 34px 65px 0 36px;
   font-size: 24px;
   line-height: 29px;
   font-weight: 900;
@@ -11,10 +10,8 @@
 @media screen and (max-width: 660px) {
   .popup__name {
     width: 238px;
-    min-height: 22px;
-    margin: 26px auto 0;
+    margin: 27px auto 0;
     font-size: 18px;
     line-height: 22px;
-    font-weight: 900;
   }
 }

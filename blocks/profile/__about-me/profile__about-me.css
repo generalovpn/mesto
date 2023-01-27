@@ -1,6 +1,5 @@
-.info__about-me {
+.profile__about-me {
   max-width: 282px;
-  min-height: 14px;
   margin: 0;
   text-align: start;
   font-size: 18px;
@@ -12,8 +11,8 @@
 }
 
 @media screen and (max-width: 899px) {
-  .info__about-me {
-    margin: 0 auto;
+  .profile__about-me {
+    margin: 0 0 0 27px;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
