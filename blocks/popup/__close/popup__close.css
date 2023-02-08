@@ -1,6 +1,6 @@
-.popup__btn-close {
-  min-width: 32px;
-  min-height: 32px;
+.popup__close {
+  width: 32px;
+  height: 32px;
   padding: 0;
   border: none;
   position: absolute;
@@ -13,15 +13,15 @@
   background-repeat: no-repeat;
 }
 
-.popup__btn-close:hover {
+.popup__close:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (max-width: 660px) {
-  .popup__btn-close {
-    min-width: 20px;
-    min-height: 20px;
+  .popup__close {
+    width: 20px;
+    height: 20px;
     top: -36px;
     right: 0;
   }
