@@ -107,11 +107,13 @@ popups.forEach(popup => {
 // Функция открытия попап
 function openPopup(popup) {
   popup.classList.add(popupActiveClass);
+  document.addEventListener('keydown', closeByEsc);
 }
 
 // Функция закрытия попап
 function closePopup(popup) {
   popup.classList.remove(popupActiveClass);
+  document.removeEventListener('keydown', closeByEsc);
 }
 
 const addCardButton = document.querySelector('.profile__btn-add');
@@ -120,6 +122,14 @@ const imgButton = document.querySelector('.element__picture');
 
 addCardButton.addEventListener('click', () => openPopup(popupCard));
 editButton.addEventListener('click', openPopupProfile);
+
+// Функция закрытия попап ESC
+function closeByEsc(event) {
+  if (event.key === "Escape") {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+  }
+};
 
 // Функция открытия фото CARD
 const elImg = imgPopup.querySelector('img');
@@ -141,8 +151,18 @@ profileForm.addEventListener('submit', function (event) {
 function deleteCard(event) {
   const card = event.target.closest('.element');
   card.remove();
-}
+};
+
 // Функция LIKE
 function activeBtnLike(event) {
   event.target.classList.toggle('element__heart_active');
-}
+};
+
+// Функция звкрытия попап кликом на оверлэй
+popups.forEach((popup) => { 
+  popup.addEventListener('click', (evt) => { 
+    if (evt.target.classList.contains(popupActiveClass)) {
+        closePopup(popup); 
+    } 
+  })
+});
