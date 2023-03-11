@@ -21,111 +21,66 @@
         <button class="profile__btn-add" type="button"></button>
       </section>
       <section class="elements">
-        <!-- <div class="element">
-          <button type="button" class="element__btn-delete"></button>
-          <img src="./images/karachaevsk.jpg" class="element__picture" alt="Изображение крепость Карачаевск"/>
-          <div class="element__group">
-            <h2 class="element__title">Карачаевск</h2>
-            <button class="element__heart" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <button type="button" class="element__btn-delete"></button>
-          <img src="./images/elbrus.jpg" class="element__picture" alt="Изображение гора Эльбрус"/>
-          <div class="element__group">
-            <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__heart" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <button type="button" class="element__btn-delete"></button>
-          <img src="./images/dombay.jpg" class="element__picture" alt="Изображение гора Домбай"/>
-          <div class="element__group">
-            <h2 class="element__title">Домбай</h2>
-            <button class="element__heart" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <button type="button" class="element__btn-delete"></button>
-          <img src="./images/elbrus.jpg" class="element__picture" alt="Изображение гора Эльбрус"/>
-          <div class="element__group">
-            <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__heart" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <button type="button" class="element__btn-delete"></button>
-          <img src="./images/dombay.jpg" class="element__picture" alt="Изображение гора Домбай"/>
-          <div class="element__group">
-            <h2 class="element__title">Домбай</h2>
-            <button class="element__heart" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <button type="button" class="element__btn-delete"></button>
-          <img src="./images/karachaevsk.jpg" class="element__picture" alt="Изображение крепость Карачаевск"/>
-          <div class="element__group">
-            <h2 class="element__title">Карачаевo-Черкесия</h2>
-            <button class="element__heart" type="button"></button>
-          </div>
-        </div> -->
+        <template id="template-card">
+          <article class="element">
+            <button type="button" class="element__btn-delete"></button>
+            <img src="#" class="element__picture" alt="#"/>
+            <div class="element__group">
+              <h2 class="element__title"></h2>
+              <button class="element__heart" type="button"></button>
+            </div>
+          </article>
+        </template>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copiright">&copy; 2020 Mesto Russia</p>
     </footer>
+
     <div class="popup popup_type_profile">
       <div class="popup__container">
-        <button class="popup__close" type="button"></button>
+        <button class="popup__close" id="edit-profile-close" type="button"></button>
         <h3 class="popup__name">Редактировать профиль</h3>
-        <form class="popup__form popup__form_profile" name="profile" novalidate>
+        <form class="popup__form popup__form_profile" name="profile" id="form-profile" novalidate>
           <div class="popup__input-container">
-            <input type="text" name="name" id="fieldName" minlength="2" maxlength="40" class="popup__field popup__field_type_name" value="Жак-Ив Кусто" placeholder="Имя" required/>
-            <span class="popup__input-error" id="fieldName-error"></span>
+            <input type="text" name="username" id="userName" minlength="2" maxlength="40" class="popup__field popup__field_type_name" value="" placeholder="Имя" required/>
+            <span class="popup__input-error" id="userName-error"></span>
           </div>
           <div class="popup__input-container">
-            <input type="text" name="profession" id="fieldProfession" class="popup__field popup__field_type_profession" value="Исследователь океана" placeholder="Профессия" minlength="2" maxlength="200" required/>
-            <span class="popup__input-error" id="fieldProfession-error"></span>
+            <input type="text" name="userjob" id="userjob" class="popup__field popup__field_type_profession" value="" placeholder="О себе" minlength="2" maxlength="200" required/>
+            <span class="popup__input-error" id="userjob-error"></span>
           </div>
-          <button class="popup__btn-save" type="submit">Сохранить</button>
+          <button class="popup__btn-save" type="submit" value="Сохранить">Сохранить</button>
         </form>
       </div>
     </div>
+
     <div class="popup popup_type_card">
       <div class="popup__container">
-        <button class="popup__close" type="button"></button>
+        <button class="popup__close popup__btn-close" type="button"></button>
         <h3 class="popup__name">Новое место</h3>
-        <form class="popup__form popup__form_card" name="card" novalidate>
+        <form class="popup__form" id="form-card" name="card" novalidate>
           <div class="popup__input-container">
-            <input type="text" name="title" id="fieldTitle" class="popup__field popup__field_type_title" placeholder="Название" minlength="2" maxlength="30" required/>
-            <span class="popup__input-error" id="fieldTitle-error"></span>
+            <input type="text" name="element-name" id="element-name" class="popup__field popup__field_type_title" placeholder="Название" minlength="2" maxlength="30" value="" required/>
+            <span class="popup__input-error" id="element-name-error"></span>
           </div>
           <div class="popup__input-container">
-            <input type="url" name="link" id="fieldUrl" class="popup__field popup__field_type_link" placeholder="Ссылка на картинку" required/>
-            <span class="popup__input-error" id="fieldUrl-error"></span>
+            <input type="url" name="element-link" id="link" class="popup__field popup__field_type_link" placeholder="Ссылка на картинку" value="" required/>
+            <span class="popup__input-error" id="link-error"></span>
           </div>
-          <button class="popup__btn-save" type="submit">Создать</button>
+          <button class="popup__btn-save" type="submit" id="profileSave">Создать</button>
         </form>
       </div>
     </div>
+
     <div class="popup popup_type_image">
       <figure class="popup__figure">
-        <button class="popup__close" type="button"></button>
+        <button class="popup__close popup__btn-close" type="button" id="closeImg"></button>
         <img src="#" alt="#" class="popup__image"/>
         <figcaption class="popup__caption"></figcaption>
       </figure>
     </div>
-    <template class="template-card">
-      <div class="element">
-        <button type="button" class="element__btn-delete"></button>
-        <img src="#" class="element__picture" alt="#"/>
-        <div class="element__group">
-          <h2 class="element__title"></h2>
-          <button class="element__heart" type="button"></button>
-        </div>
-      </div>
-    </template>
-    <script src="./scripts/validate.js"></script>
-    <script src="./scripts/index.js"></script>
+
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
