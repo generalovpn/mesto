@@ -2,17 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./pages/index.css"/>
+    <!-- <link rel="stylesheet" href="./pages/index.css"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mesto</title>
   </head>
   <body class="page">
     <header class="header">
-      <img src="./images/logo.svg" class="header__logo" alt="Изображение логотип"/>
+      <img src="<%=require('./images/logo.svg')%>" class="header__logo" alt="Изображение логотип"/>
     </header>
     <main class="content">
       <section class="profile">
-        <div class="profile__frame-avatar" style="background-image: url('./images/avatar.jpg')"></div>
+        <!-- <div class="profile__frame-avatar" style="background-image: url('./images/avatar.jpg')"></div> -->
+        <img class="profile__frame-avatar" src="<%=require('./images/avatar.jpg')%>" alt="Аватар">
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__btn-edit" type="button"></button>
@@ -23,18 +24,6 @@
       <section class="elements">
       </section>
     </main>
-
-    <template id="template-card">
-      <article class="element">
-        <button type="button" class="element__btn-delete"></button>
-        <img class="element__picture">
-        <div class="element__group">
-          <h2 class="element__title"></h2>
-          <button class="element__heart" type="button"></button>
-        </div>
-      </article>
-    </template>
-
     <footer class="footer">
       <p class="footer__copiright">&copy; 2020 Mesto Russia</p>
     </footer>
@@ -52,14 +41,14 @@
             <input type="text" name="profession" id="userJob" class="popup__field popup__field_type_profession" placeholder="О себе" minlength="2" maxlength="200" required/>
             <span class="popup__input-error"></span>
           </div>
-          <button class="popup__btn-save" type="submit" value="Сохранить">Сохранить</button>
+          <button class="popup__btn-save popup__btn-edit" type="submit" value="Сохранить">Сохранить</button>
         </form>
       </div>
     </div>
 
     <div class="popup popup_type_card">
       <div class="popup__container">
-        <button class="popup__close popup__btn-close" type="button"></button>
+        <button class="popup__close popup__close-add" type="button"></button>
         <h3 class="popup__name">Новое место</h3>
         <form class="popup__form" name="formCard" novalidate>
           <div class="popup__input-container">
@@ -70,19 +59,29 @@
             <input type="url" name="link" id="linkCard" class="popup__field popup__field_type_link" placeholder="Ссылка на картинку" required/>
             <span class="popup__input-error"></span>
           </div>
-          <button class="popup__btn-save" type="submit" id="profileSave">Создать</button>
+          <button class="popup__btn-save popup__btn-add" type="submit" id="profileSave">Создать</button>
         </form>
       </div>
     </div>
 
     <div class="popup popup_type_image">
       <figure class="popup__figure">
-        <button class="popup__close popup__btn-close" type="button" id="closeImg"></button>
+        <button class="popup__close popup__delete-button" type="button" id="closeImg"></button>
         <img src="#" alt="#" class="popup__image"/>
         <figcaption class="popup__caption"></figcaption>
       </figure>
     </div>
-    <script type="module" src="./scripts/index.js" defer></script>
+    <template id="template-card" class="element-template_type_default">
+      <article class="element">
+        <button type="button" class="element__btn-delete"></button>
+        <img class="element__picture">
+        <div class="element__group">
+          <h2 class="element__title"></h2>
+          <button class="element__heart" type="button"></button>
+        </div>
+      </article>
+    </template>
+    <!-- <script type="module" src="./scripts/index.js" defer></script> -->
     <!-- <script type="module" src="./scripts/Card.js" defer></script>
     <script type="module" src="./scripts/FormValidator.js" defer></script> -->
   </body>
