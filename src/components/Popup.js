@@ -6,14 +6,14 @@ export class Popup {
     this._handleEscClose = this._handleEscClose.bind(this);
   }
 
-  _handleEscClose(event) {
-    if (event.key === 'Escape') {
+  _handleEscClose(e) {
+    if (e.key === 'Escape') {
       this.close();
     }
   }
 
-  _handleClickClose(event) {
-    if (event.target === event.currentTarget) {
+  _handleClickClose(e) {
+    if (e.target === e.currentTarget) {
       this.close();
     }
   }

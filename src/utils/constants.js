@@ -68,7 +68,6 @@ export const popupPhotosSelector = '.popup_type_image';
 export const popupSettings = {
   formSelector: '.popup__form',
   inputSelector: '.popup__field',
-  // submitBtnSelector: '.popup__btn-save',
   inactiveBtnClass: 'popup__btn-save_disabled',
   inputErrorClass: 'popup__input-error',
   errorClass: 'popup__input-error_active',

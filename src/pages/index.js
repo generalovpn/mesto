@@ -95,21 +95,21 @@ editButton.addEventListener('click', () => {
   popupWithInfoForm.open();
 });
 
-function submitFormEdit(evt) {
-  evt.preventDefault();
+function submitFormEdit(e) {
+  e.preventDefault();
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
 }
 
-popupButtonSelectorEdit.addEventListener('click', (evt) => {
-  submitFormEdit(evt);
+popupButtonSelectorEdit.addEventListener('click', (e) => {
+  submitFormEdit(e);
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
   popupWithInfoForm.close()
 });
 
-const submitFormAdd = (evt) => {
-  evt.preventDefault();
+const submitFormAdd = (e) => {
+  e.preventDefault();
   const card = createCard({
     name: titleInput.value,
     link: linkInput.value
@@ -119,8 +119,8 @@ const submitFormAdd = (evt) => {
   popupWithAddForm.close();
 }
 
-popupButtonSelectorAdd.addEventListener('click', (evt) => {
-  submitFormAdd(evt)
+popupButtonSelectorAdd.addEventListener('click', (e) => {
+  submitFormAdd(e)
 });
 
 const setFormsEventListeners = () => {
