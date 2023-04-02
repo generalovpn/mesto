@@ -1,19 +1,65 @@
-export class UserInfo {
-  constructor(userSelector) {
-    this._name = userSelector.profileName.textContent;
-    this._caption = userSelector.profileJob.textContent
+export default class UserInfo {
+  constructor(profileNameSelector, profileDescriptionSelector) {
+    this.profileName = document.querySelector(profileNameSelector);
+    this.profileDescription = document.querySelector(profileDescriptionSelector);
   }
 
   getUserInfo() {
-    const data = {
-      name: this._name,
-      caption: this._caption
+    return {
+      profileName: this.profileName.textContent,
+      profileDescription: this.profileDescription.textContent
     }
-    return data;
   }
 
-  setUserInfo(data) {
-    this._name = data.name;
-    this._caption = data.caption;
+  setUserInfo({nameInput, jobInput}) {
+    this.profileName.textContent = nameInput;
+    this.profileDescription.textContent = jobInput;
   }
 }
+
+
+
+
+
+
+
+// export class UserInfo {
+//   constructor({ nameProfile, jobProfile }) {
+//     this._name = document.querySelector(nameProfile);
+//     this._job = document.querySelector(jobProfile);
+//   }
+
+//   getUserInfo() {
+//     return {
+//       hero: this._name.textContent,
+//       profession: this._job.textContent,
+//     };
+//   }
+
+//   setUserInfo({ hero, profession }) {
+//     this._name.textContent = hero;
+//     this._job.textContent = profession;
+//   }
+// }
+
+
+
+// export class UserInfo {
+//   constructor({ nameAuthor, infoAuthor }) {
+//     this._nameAuthor = nameAuthor;
+//     this._infoAuthor = infoAuthor;
+//   }
+  
+//   getUserInfo() {
+//     this._userInfoValues = {
+//       nameAuthor: this._nameAuthor.textContent,
+//       infoAuthor: this._infoAuthor.textContent,
+//     };
+//     return this._userInfoValues;
+//   }
+  
+//   setUserInfo(newData) {
+//     this._nameAuthor.textContent = newData.nameAuthor;
+//     this._infoAuthor.textContent = newData.infoAuthor;
+//   }
+// }

@@ -25,50 +25,56 @@ export const initialCards = [
   }
 ];
 
-export const popupForm = {
+export const formConfig = {
   formSelector: '.popup__form',
-  inputSelector: '.popup__field',
-  submitBtnSelector: '.popup__btn-save',
-  errorClass: '.popup__input-error',
-}
-
-export const imageData = {
-  imageSelector: '.popup__image',
-  captionSelector: '.popup__caption'
-}
-
-export const popupEditProfile = document.querySelector('.popup_type_profile');
-export const popupAddElement = document.querySelector('.popup_type_card');
-export const popupEditForm = document.forms.formProfile;
-export const popupAddForm = document.forms.formCard;
-
-export const editButton = document.querySelector('.profile__btn-edit');
-export const addButton = document.querySelector('.profile__btn-add');
-
-export const editProfileClosePopupButton = popupEditProfile.querySelector('.popup__close');
-export const addCardClosePopupButton = popupAddElement.querySelector('.popup__close-add');
-export const imageClosePopupButton = document.querySelector('.popup__delete-button');
-
-export const profileName = document.querySelector('.profile__name');
-export const profileJob = document.querySelector('.profile__about-me');
-
-export const nameInput = document.querySelector('.popup__field_type_name');
-export const jobInput = document.querySelector('.popup__field_type_profession');
-
-export const titleInput = document.querySelector('.popup__field_type_title');
-export const linkInput = document.querySelector('.popup__field_type_link');
-
-export const elementCard = '.elements';
-
-export const popupButtonSelectorAdd = document.querySelector('.popup__btn-add');
-export const popupButtonSelectorEdit = document.querySelector('.popup__btn-edit');
-
-export const popupPhotosSelector = '.popup_type_image';
-
-export const popupSettings = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__field',
-  inactiveBtnClass: 'popup__btn-save_disabled',
-  inputErrorClass: 'popup__input-error',
-  errorClass: 'popup__input-error_active',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__btn-save',
+  inactiveButtonClass: 'popup__btn-save_disabled',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__input-error_type_visible',
 };
+
+export const cardConfig = {
+  likeButtonSelector: '.element__heart',
+  deleteButtonSelector: '.element__btn-delete',
+  cardImageSelector: '.element__picture',
+  cardSelector: '.element',
+  cardTitleSelector: '.element__title',
+  cardTemplateSelector: '.template-card'
+}
+
+// export const popupProfile = document.querySelector('.popup_type_profile');
+// export const popupCards = document.querySelector('.popup_type_card');
+// export const popupView = document.querySelector('.popup_type_image');
+
+export const editProfileButton = document.querySelector('.profile__btn-edit');
+export const addCardButton = document.querySelector('.profile__btn-add');
+
+// export const profileForm = document.forms['profileForm'];
+// export const cardForm  = document.forms['cardForm'];
+// export const formValidators = {profileForm, cardForm};
+// export const cardsContainer = '.elements';
+// export const nameProfile = '.profile__name';
+// export const jobProfile = '.profile__about-me';
+
+
+
+
+
+// export const popupForEditAuthor = document.querySelector('.popup_type_profile');
+// export const popupForAddCard = document.querySelector('.popup_type_card');
+// export const popupForScaleImage = document.querySelector('.popup_type_image');
+
+// export const profileEditOpenBtn = document.querySelector('.profile__btn-edit');
+// export const cardAddOpenBtn = document.querySelector('.profile__btn-add');
+  
+// export const formForEditAuthor = popupForEditAuthor.querySelector('.popup__form_profile');
+// export const formForAddCard = popupForAddCard.querySelector('.popup__form_card');
+  
+// export const authorProfile = document.querySelector('.profile__name');
+// export const authorJobProfile = document.querySelector('.profile__about-me');
+
+// export const authorProfileInput = document.querySelector('.popup__field_type_name');
+// export const authorJobProfileInput = document.querySelector('.popup__field_type_profession');
+  
+// export const placeElements = document.querySelector('.elements');
