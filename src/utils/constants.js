@@ -43,38 +43,5 @@ export const cardConfig = {
   cardTemplateSelector: '.template-card'
 }
 
-// export const popupProfile = document.querySelector('.popup_type_profile');
-// export const popupCards = document.querySelector('.popup_type_card');
-// export const popupView = document.querySelector('.popup_type_image');
-
-export const editProfileButton = document.querySelector('.profile__btn-edit');
-export const addCardButton = document.querySelector('.profile__btn-add');
-
-// export const profileForm = document.forms['profileForm'];
-// export const cardForm  = document.forms['cardForm'];
-// export const formValidators = {profileForm, cardForm};
-// export const cardsContainer = '.elements';
-// export const nameProfile = '.profile__name';
-// export const jobProfile = '.profile__about-me';
-
-
-
-
-
-// export const popupForEditAuthor = document.querySelector('.popup_type_profile');
-// export const popupForAddCard = document.querySelector('.popup_type_card');
-// export const popupForScaleImage = document.querySelector('.popup_type_image');
-
-// export const profileEditOpenBtn = document.querySelector('.profile__btn-edit');
-// export const cardAddOpenBtn = document.querySelector('.profile__btn-add');
-  
-// export const formForEditAuthor = popupForEditAuthor.querySelector('.popup__form_profile');
-// export const formForAddCard = popupForAddCard.querySelector('.popup__form_card');
-  
-// export const authorProfile = document.querySelector('.profile__name');
-// export const authorJobProfile = document.querySelector('.profile__about-me');
-
-// export const authorProfileInput = document.querySelector('.popup__field_type_name');
-// export const authorJobProfileInput = document.querySelector('.popup__field_type_profession');
-  
-// export const placeElements = document.querySelector('.elements');
+export const buttonEditProfile = document.querySelector('.profile__btn-edit');
+export const buttonAddCard = document.querySelector('.profile__btn-add');
