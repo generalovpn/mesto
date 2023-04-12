@@ -26,6 +26,7 @@
 .popup__container{background-color:#fff;border-radius:10px;display:flex;flex-direction:column;margin:auto;max-width:430px;position:relative;width:100%}@media screen and (max-width:660px){.popup__container{max-width:282px}}
 .popup__close{background-color:transparent;background:url(039f1f5203f653b4bacd.svg);background-position:50%;background-repeat:no-repeat;background-size:cover;border:none;height:32px;padding:0;position:absolute;right:-40px;top:-40px;width:32px}.popup__close:hover{cursor:pointer;opacity:.6}@media screen and (max-width:660px){.popup__close{height:20px;right:0;top:-36px;width:20px}}
 .popup__name{color:#000;font-size:24px;font-weight:900;line-height:29px;margin:34px 65px 0 36px;max-width:330px;width:100%}@media screen and (max-width:660px){.popup__name{font-size:18px;line-height:22px;margin:27px auto 0;max-width:238px}}
+.popup__name_confirm{margin:0}
 .popup__form{display:flex;flex-direction:column;margin:43px auto 37px;max-width:358px}@media screen and (max-width:660px){.popup__form{margin:44px auto 25px;max-width:238px}}
 .popup__input{border:0;border-bottom:1px solid rgba(0,0,0,.2);font-size:14px;font-weight:400;line-height:17px;margin:0 auto;min-height:27px;min-width:358px;padding:0 0 4px}.popup__input:focus{border:3px solid #79bcf6;border-radius:2px;outline:0}@media screen and (max-width:660px){.popup__input{margin:25px 0 0;min-width:238px}}
 .popup__input-error{color:red;font-size:12px;font-weight:400;gap:0;line-height:15px;min-height:30px}
