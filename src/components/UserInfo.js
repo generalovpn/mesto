@@ -1,18 +1,28 @@
-export default class UserInfo {
-  constructor(profileNameSelector, profileDescriptionSelector) {
-    this.profileName = document.querySelector(profileNameSelector);
-    this.profileDescription = document.querySelector(profileDescriptionSelector);
+class UserInfo {
+  constructor({ selectorUserName, selectorUserJob, selectorUserAvatar}) {
+    this._profileName = document.querySelector(selectorUserName);
+    this._profileJob = document.querySelector(selectorUserJob);
+    this._profileAvatar = document.querySelector(selectorUserAvatar);
   }
 
+  /**Функция получения информации из профиля */
   getUserInfo() {
     return {
-      profileName: this.profileName.textContent,
-      profileDescription: this.profileDescription.textContent
+      name: this._profileName.textContent,
+      about: this._profileJob.textContent,
     }
   }
 
-  setUserInfo({nameInput, jobInput}) {
-    this.profileName.textContent = nameInput;
-    this.profileDescription.textContent = jobInput;
+  /**Функция добавления информации в профиль из формы */
+  setUserInfo({name, about}) {
+    this._profileName.textContent = name;
+    this._profileJob.textContent = about;
+  }
+
+  /**Функция добавления ссылки на новую картинку аватара */
+  setUserAvatar(url) {
+    this._profileAvatar.src = url.avatar
   }
 }
+
+export { UserInfo };

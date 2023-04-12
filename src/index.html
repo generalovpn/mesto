@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mesto</title>
   </head>
+
   <body class="page">
     <header class="header">
       <img src="<%=require('./images/logo.svg')%>" class="header__logo" alt="Изображение логотип"/>
     </header>
+
     <main class="content">
       <section class="profile">
-        <!-- <div class="profile__frame-avatar" style="background-image: url('./images/avatar.jpg')"></div> -->
-        <img class="profile__frame-avatar" src="<%=require('./images/avatar.jpg')%>" alt="Аватар">
+        <div class="profile__avatar">
+          <img class="profile__img" src="<%=require('./images/avatar.jpg')%>" alt="Аватар">
+        </div>
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__btn-edit" type="button"></button>
@@ -23,101 +26,130 @@
       </section>
 
       <section class="elements">
-        
       </section>
-      
-      <template class="template-card">
-        <article class="element">
-          <button type="button" class="element__btn-delete"></button>
-          <img class="element__picture"src="#" alt="">
-          <div class="element__group">
-            <h2 class="element__title"></h2>
-            <button class="element__heart" type="button"></button>
-          </div>
-        </article>
-      </template>
     </main>
 
     <footer class="footer">
       <p class="footer__copiright">&copy; 2020 Mesto Russia</p>
     </footer>
-
+<!-- Popup для редактирования профиля -->
     <div class="popup popup_type_profile">
       <div class="popup__container">
         <button class="popup__close" type="button"></button>
         <h3 class="popup__name">Редактировать профиль</h3>
         <form 
-          class="popup__form popup__form_edit-profile"      name="editProfileForm" 
-          novalidate>
+          class="popup__form popup__form_type_profile" id="edit-form" name="form-profile" novalidate>
         <div class="popup__input-container">
           <input 
             type="text" 
-            name="nameInput" 
-            id="name-input" 
+            name="name" 
+            id="input-name" 
             minlength="2" 
             maxlength="40" 
-            class="popup__input popup__input_profile_name" placeholder="Имя" 
+            class="popup__input popup__input_type_name" placeholder="Имя" 
             required>
-          <span class="popup__input-error name-input-error"></span>
+          <span id="input-name-error" class="popup__input-error"></span>
         </div>
         <div class="popup__input-container">
           <input 
             type="text" 
-            name="jobInput" 
-            id="job-input" 
-            class="popup__input popup__input_profile_job" 
+            name="about" 
+            id="input-job" 
+            class="popup__input popup__input_type_job" 
             placeholder="О себе" 
             minlength="2" 
             maxlength="200" 
             required/>
-          <span class="popup__input-error job-input-error"></span>
+          <span id="input-job-error" class="popup__input-error"></span>
         </div>
           <button class="popup__btn-save" type="submit" value="Сохранить">Сохранить</button>
         </form>
       </div>
     </div>
-
-    <div class="popup popup_type_card">
+<!-- Popup для добавления каринки -->
+    <div class="popup popup_type_card" id="popup-add">
       <div class="popup__container">
         <button class="popup__close popup__close-add" type="button"></button>
         <h3 class="popup__name">Новое место</h3>
         <form 
-          class="popup__form popup__form_card" 
-          name="addCardForm" 
+          class="popup__form popup__form_type_place" 
+          name="form-place" 
           novalidate>
         <div class="popup__input-container">
           <input 
             type="text" 
             name="name"
-            id="title-input" 
-            class="popup__input popup__input_card_title" placeholder="Название" 
+            id="input-title" 
+            class="popup__input popup__input_type_title" placeholder="Название" 
             minlength="2" 
             maxlength="30" 
             required/>
-          <span class="popup__input-error title-input-error"></span>
+          <span id="input-title-error" class="popup__input-error"></span>
         </div>
         <div class="popup__input-container">
           <input 
             type="url" 
             name="link" 
-            id="link-input" 
-            class="popup__input popup__input_card_link" placeholder="Ссылка на картинку" 
+            id="input-link" 
+            class="popup__input popup__input_type_link" placeholder="Ссылка на картинку" 
             required/>
-          <span class="popup__input-error link-input-error"></span>
+          <span id="input-link-error" class="popup__input-error"></span>
         </div>
           <button type="submit" class="popup__btn-save">Создать</button>
         </form>
       </div>
     </div>
-
+<!-- Popup для просмотра картинки -->
     <div class="popup popup_type_image">
       <figure class="popup__figure">
         <button class="popup__close" type="button" id="closeImg"></button>
-        <img src="#" alt="" class="popup__image"/>
+        <img src="#" alt="" class="popup__photo"/>
         <figcaption class="popup__caption"></figcaption>
       </figure>
     </div>
-    
+<!-- Popup для редактирования аватара -->
+    <div class="popup popup_type_avatar" id="popup-avatar">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <h2 class="popup__name">Обновить аватар</h2>
+        <form class="popup__form popup__form_type_avatar" id="avatar-form" name="form-avatar" novalidate>
+          <div class="popup__input-container">
+            <input 
+            id="input-avatar"
+            type="url" 
+            class="popup__input popup__input_type_link" name="avatar" 
+            placeholder="Ссылка на картинку" 
+            required>
+            <span id="input-avatar-error" class="popup__input-error"></span>
+          </div>
+          <button type="submit" class="popup__btn-save">Сохранить</button>
+        </form>
+      </div>
+    </div>
+<!-- Popup для подтверждения действия -->
+    <div class="popup popup_type_confirm" id="popup-confirm">
+      <div class="popup__container">
+        <form class="popup__form">
+          <button class="popup__close" type="button"></button>
+          <h2 class="popup__name popup__name_confirm">Вы уверены?</h2>
+          <button type="submit" class="popup__btn-save">Да</button>
+        </form>
+      </div>
+    </div>
+<!-- template элемент -->
+    <template class="template-card" id="template-list-item">
+        <article class="element">
+          <button type="button" class="element__btn-delete"></button>
+          <img class="element__picture"src="#" alt="">
+          <div class="element__group">
+            <h2 class="element__title"></h2>
+            <div class="element__like-group">
+              <button class="element__heart" type="button"></button>
+              <span class="element__likes-count">0</span>
+            </div>
+          </div>
+        </article>
+      </template>
     <!-- <script type="module" src="./scripts/index.js" defer></script> -->
     <!-- <script type="module" src="./scripts/Card.js" defer></script>
     <script type="module" src="./scripts/FormValidator.js" defer></script> -->
