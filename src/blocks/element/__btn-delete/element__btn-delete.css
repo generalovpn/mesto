@@ -11,8 +11,3 @@
   top: 20px;
   right: 20px;
 }
-
-.element__btn-delete:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}

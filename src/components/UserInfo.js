@@ -1,28 +1,27 @@
-class UserInfo {
-  constructor({ selectorUserName, selectorUserJob, selectorUserAvatar}) {
-    this._profileName = document.querySelector(selectorUserName);
-    this._profileJob = document.querySelector(selectorUserJob);
-    this._profileAvatar = document.querySelector(selectorUserAvatar);
-  }
-
-  /**Функция получения информации из профиля */
-  getUserInfo() {
-    return {
-      name: this._profileName.textContent,
-      about: this._profileJob.textContent,
-    }
-  }
-
-  /**Функция добавления информации в профиль из формы */
-  setUserInfo({name, about}) {
-    this._profileName.textContent = name;
-    this._profileJob.textContent = about;
-  }
-
-  /**Функция добавления ссылки на новую картинку аватара */
-  setUserAvatar(url) {
-    this._profileAvatar.src = url.avatar
-  }
+export default class UserInfo {
+	constructor(profileNameSelector, profileDescriptionSelector, profileAvatarSelector) {
+		this.profileName = document.querySelector(profileNameSelector);
+		this.profileDescription = document.querySelector(profileDescriptionSelector);
+		this.profileAvatar = document.querySelector(profileAvatarSelector);
+	}
+	
+	getUserInfo() {
+		return {
+			profileName: this.profileName.textContent,
+			profileDescription: this.profileDescription.textContent
+		};
+	}
+	
+	setUserInfo({ nameInput, jobInput, _id }) {
+		this.profileName.textContent = nameInput;
+		this.profileDescription.textContent = jobInput;
+	}
+	
+	getUserID(_id) {
+		this.profileId = _id;
+	}
+	
+	setUserAvatar(link) {
+		this.profileAvatar.src = link;
+	}
 }
-
-export { UserInfo };
