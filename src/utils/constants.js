@@ -1,4 +1,4 @@
-export const initialCards = [
+const initialCards = [
   {
     name: 'Архыз',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -26,7 +26,7 @@ export const initialCards = [
 ];
 
 
-export const formConfig = {
+const formValidationConfig = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__btn-save',
@@ -35,16 +35,4 @@ export const formConfig = {
   errorClass: 'popup__input-error_type_visible',
 };
 
-export const cardConfig = {
-  likeButtonSelector: '.element__heart',
-  deleteButtonClass: 'element__btn-delete',
-  cardImageSelector: '.element__picture',
-  cardSelector: '.element',
-  cardTitleSelector: '.element__title',
-  cardTemplateSelector: '.template-card',
-  cardLikeCounterSelector: '.element__likes-count'
-}
-
-export const buttonEditProfile = document.querySelector('.profile__btn-edit');
-export const buttonAddCard = document.querySelector('.profile__btn-add');
-export const buttonEditAvatar = document.querySelector('.profile__btn-avatar');
+export { initialCards, formValidationConfig };
